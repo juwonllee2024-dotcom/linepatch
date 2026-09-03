@@ -81,14 +81,24 @@ dehyphenated word, 1 normalized artifact)`. The output must match
 `examples/clean.txt` byte-for-byte. The temporary output is deleted after the
 hash is recorded; it is never the source fixture.
 
-The recorded run output hash and final package hashes are added to the release
-report after the last build, so they cannot become stale when this verification
-record is edited.
+SHA-256 of the recorded run output:
+
+```text
+71702da4d7c8a66ff047f44194350f4820509c85433f4158efa2e412e662a1c7  .verification-clean.txt
+```
+
+The temporary file was removed after the comparison. The exact package hashes
+below were also verified against the digests returned by GitHub for the
+published release assets.
 
 ## Release identity
 
-- Commit: recorded after all checks pass.
-- CI run: recorded after the public push and successful workflow completion.
-- Release: recorded after `v0.1.0` is published.
-- Package SHA-256: recorded from the exact wheel and sdist assets attached to
-  that release.
+- Release commit: `2407e279530a57db3444abd3a78ac5cd93d2b255`.
+- CI run: [33790287378](https://github.com/juwonllee2024-dotcom/linepatch/actions/runs/33790287378)
+  — Python 3.10, 3.11, 3.12, and 3.13 all passed.
+- Release: [v0.1.0](https://github.com/juwonllee2024-dotcom/linepatch/releases/tag/v0.1.0).
+- Package SHA-256:
+  - `linepatch-0.1.0-py3-none-any.whl`:
+    `319039a3157206de308f0cbc121871866f32e7d899e9a7fd4f5ec2807b9b89a1`
+  - `linepatch-0.1.0.tar.gz`:
+    `ef01934880e0d57e86138d6b0ab4b1532c582a9e22a859829de826253de73e88`
