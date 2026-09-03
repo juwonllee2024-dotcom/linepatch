@@ -1,0 +1,9 @@
+# Research note
+This paragraph was copied from a PDF and each
+visual line became a new line. It also contains an inter-
+national example and a nonbreaking space.
+
+- Preserve this list item
+- Preserve this one
+
+https://example.com/reference
